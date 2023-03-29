@@ -13,6 +13,8 @@ export class ServersComponent implements OnInit {
   vinculacionInicial = 'vinculacion no creada';
   serverName = '';
   vinculacion = '';
+  serverCreate = false;
+  servers = ['servidor1', 'servidor2', 'servidor3'];
 
   constructor() {
     setTimeout(() => {
@@ -23,6 +25,8 @@ export class ServersComponent implements OnInit {
   ngOnInit() {}
 
   onCreateServer() {
+    this.serverCreate = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus =
       'Server was created! name is ' + this.serverName;
   }

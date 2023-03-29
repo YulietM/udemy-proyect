@@ -21,10 +21,11 @@
 <p>{{ vinculacionInicial }}</p>
 <!-- <p [innerText]="allowNewServer"></p> -->
 
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 
 <p>{{ mensajeInicial }}</p>
 <hr />
+<p *ngIf="serverCreate">el servidor fue creado {{ serverName }}</p>
 <ol>
   <li>
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores maxime
